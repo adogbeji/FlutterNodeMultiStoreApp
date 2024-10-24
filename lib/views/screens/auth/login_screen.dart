@@ -14,7 +14,7 @@ class LoginScreen extends StatelessWidget {
             Text(
               'Log In',
               style: GoogleFonts.getFont(
-                'lato',
+                'Lato',
                 fontSize: 23,
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
