@@ -21,6 +21,17 @@ class LoginScreen extends StatelessWidget {
                 letterSpacing: 0.2,
               ),
             ),
+
+            const Text(
+              'Explore the world exclusives',
+              style: TextStyle(
+                fontSize: 14,
+                color: Colors.black,
+                letterSpacing: 0.2,
+              ),
+            ),
+
+            Image.asset('assets/images/Illustration.png', width: 200, height: 200),
           ],
         ),
       ),
