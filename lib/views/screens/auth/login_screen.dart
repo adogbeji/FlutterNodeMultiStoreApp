@@ -31,7 +31,12 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            Image.asset('assets/images/Illustration.png', width: 200, height: 200),
+            Image.asset('assets/images/Illustration.png', width: 200, height: 200,),
+
+            const Align(
+              alignment: Alignment.topLeft,
+              child: Text('Email'),
+            ),
           ],
         ),
       ),
