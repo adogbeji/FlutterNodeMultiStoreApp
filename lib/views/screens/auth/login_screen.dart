@@ -21,7 +21,6 @@ class LoginScreen extends StatelessWidget {
                 letterSpacing: 0.2,
               ),
             ),
-
             const Text(
               'Explore the world exclusives',
               style: TextStyle(
@@ -31,11 +30,28 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
 
-            Image.asset('assets/images/Illustration.png', width: 200, height: 200,),
+            Image.asset(
+              'assets/images/Illustration.png',
+              width: 200,
+              height: 200,
+            ),
 
-            const Align(
+            Align(
               alignment: Alignment.topLeft,
-              child: Text('Email'),
+              child: Text(
+                'Email',
+                style: GoogleFonts.getFont(
+                  'Nunito Sans',
+                  fontWeight: FontWeight.w600,
+                  letterSpacing: 0.2,
+                ),
+              ),
+            ),
+
+            TextFormField(
+              decoration: InputDecoration(
+                fillColor: Colors.white,
+              ),
             ),
           ],
         ),
