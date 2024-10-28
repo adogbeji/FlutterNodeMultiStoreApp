@@ -51,6 +51,12 @@ class LoginScreen extends StatelessWidget {
             TextFormField(
               decoration: InputDecoration(
                 fillColor: Colors.white,
+                filled: true,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(9),
+                ),
+                focusedBorder: InputBorder.none,
+                enabledBorder: InputBorder.none,
               ),
             ),
           ],
