@@ -57,8 +57,20 @@ class LoginScreen extends StatelessWidget {
                 ),
                 focusedBorder: InputBorder.none,
                 enabledBorder: InputBorder.none,
+                labelText: 'Enter your email',
+                labelStyle: GoogleFonts.getFont(
+                  fontSize: 14,
+                  'Nunito Sans',
+                  letterSpacing: 0.1,
+                ),
+                prefixIcon: Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Image.asset('assets/icons/email.png', width: 20, height: 20,),
+                ),
               ),
             ),
+
+            const SizedBox(height: 20,),
           ],
         ),
       ),
