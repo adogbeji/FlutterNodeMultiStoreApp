@@ -111,6 +111,20 @@ class LoginScreen extends StatelessWidget {
                   suffixIcon: const Icon(Icons.visibility),
                 ),
               ),
+
+              const SizedBox(height: 20,),
+
+              // LOGIN BUTTON
+              Container(
+                width: 319,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  gradient: LinearGradient(
+                    colors: [Colors.blueAccent, Colors.black],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
