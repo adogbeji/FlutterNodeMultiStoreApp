@@ -32,13 +32,13 @@ class LoginScreen extends StatelessWidget {
                   letterSpacing: 0.2,
                 ),
               ),
-        
+
               Image.asset(
                 'assets/images/Illustration.png',
                 width: 200,
                 height: 200,
               ),
-        
+
               // EMAIL INPUT FIELD
               Align(
                 alignment: Alignment.topLeft,
@@ -51,7 +51,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-        
+
               TextFormField(
                 decoration: InputDecoration(
                   fillColor: Colors.white,
@@ -69,13 +69,17 @@ class LoginScreen extends StatelessWidget {
                   ),
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Image.asset('assets/icons/email.png', width: 20, height: 20,),
+                    child: Image.asset(
+                      'assets/icons/email.png',
+                      width: 20,
+                      height: 20,
+                    ),
                   ),
                 ),
               ),
-        
+
               const SizedBox(height: 20,),
-        
+
               // PASSWORD INPUT FIELD
               Align(
                 alignment: Alignment.topLeft,
@@ -88,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                   ),
                 ),
               ),
-        
+
               TextFormField(
                 decoration: InputDecoration(
                   fillColor: Colors.white,
@@ -100,13 +104,17 @@ class LoginScreen extends StatelessWidget {
                   enabledBorder: InputBorder.none,
                   labelText: 'Enter your password',
                   labelStyle: GoogleFonts.getFont(
-                    fontSize: 14,
                     'Nunito Sans',
+                    fontSize: 14,
                     letterSpacing: 0.1,
                   ),
                   prefixIcon: Padding(
                     padding: const EdgeInsets.all(10.0),
-                    child: Image.asset('assets/icons/password.png', width: 20, height: 20,),
+                    child: Image.asset(
+                      'assets/icons/password.png',
+                      width: 20,
+                      height: 20,
+                    ),
                   ),
                   suffixIcon: const Icon(Icons.visibility),
                 ),
@@ -120,8 +128,19 @@ class LoginScreen extends StatelessWidget {
                 height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(5),
-                  gradient: LinearGradient(
-                    colors: [Colors.blueAccent, Colors.black],
+                  gradient: const LinearGradient(
+                    colors: [Colors.blueAccent, Colors.blue],
+                  ),
+                ),
+                child: Center(
+                  child: Text(
+                    'Log In',
+                    style: GoogleFonts.getFont(
+                      'Lato',
+                      fontSize: 17,
+                      color: Colors.white,
+                      // fontWeight: FontWeight.bold,
+                    ),
                   ),
                 ),
               ),
