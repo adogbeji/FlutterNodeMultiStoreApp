@@ -132,16 +132,31 @@ class LoginScreen extends StatelessWidget {
                     colors: [Colors.blueAccent, Colors.blue],
                   ),
                 ),
-                child: Center(
-                  child: Text(
-                    'Log In',
-                    style: GoogleFonts.getFont(
-                      'Lato',
-                      fontSize: 17,
-                      color: Colors.white,
-                      // fontWeight: FontWeight.bold,
+                // child: Center(
+                //   child: Text(
+                //     'Log In',
+                //     style: GoogleFonts.getFont(
+                //       'Lato',
+                //       fontSize: 17,
+                //       color: Colors.white,
+                //       // fontWeight: FontWeight.bold,
+                //     ),
+                //   ),
+                // ),
+
+                child: Stack(
+                  children: [
+                    Positioned(
+                      left: 278,
+                      top: 19,
+                      child: Opacity(opacity: 0.5, child: Container(
+                        width: 60,
+                        height: 60,
+                        clipBehavior: Clip.antiAlias,
+                        decoration: BoxDecoration(),
+                      ),),
                     ),
-                  ),
+                  ],
                 ),
               ),
             ],
