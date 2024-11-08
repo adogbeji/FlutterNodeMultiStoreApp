@@ -78,7 +78,9 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
 
               // PASSWORD INPUT FIELD
               Align(
@@ -120,7 +122,9 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 20,),
+              const SizedBox(
+                height: 20,
+              ),
 
               // LOGIN BUTTON
               Container(
@@ -149,12 +153,29 @@ class LoginScreen extends StatelessWidget {
                     Positioned(
                       left: 278,
                       top: 19,
-                      child: Opacity(opacity: 0.5, child: Container(
-                        width: 60,
-                        height: 60,
-                        clipBehavior: Clip.antiAlias,
-                        decoration: BoxDecoration(),
-                      ),),
+                      child: Opacity(
+                        opacity: 0.5,
+                        child: Container(
+                          width: 60,
+                          height: 60,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              width: 12,
+                              color: const Color.fromARGB(255, 45, 102, 200),
+                            ),
+                            borderRadius: BorderRadius.circular(30),
+                          ),
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      left: 260,
+                      top: 29,
+                      child: Opacity(
+                        opacity: 0.5,
+                      ),
                     ),
                   ],
                 ),
