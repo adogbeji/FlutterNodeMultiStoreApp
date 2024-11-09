@@ -175,6 +175,14 @@ class LoginScreen extends StatelessWidget {
                       top: 29,
                       child: Opacity(
                         opacity: 0.5,
+                        child: Container(
+                          width: 10,
+                          height: 10,
+                          clipBehavior: Clip.antiAlias,
+                          decoration: BoxDecoration(
+                            border: Border.all(width: 3),
+                          ),
+                        ),
                       ),
                     ),
                   ],
