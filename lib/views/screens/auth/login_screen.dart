@@ -181,7 +181,20 @@ class LoginScreen extends StatelessWidget {
                           clipBehavior: Clip.antiAlias,
                           decoration: BoxDecoration(
                             border: Border.all(width: 3),
+                            color: Colors.black,
+                            borderRadius: BorderRadius.circular(5),
                           ),
+                        ),
+                      ),
+                    ),
+
+                    Positioned(
+                      child: Opacity(
+                        opacity: 0.3,
+                        child: Container(
+                          width: 5,
+                          height: 5,
+                          clipBehavior: Clip.antiAlias,
                         ),
                       ),
                     ),
