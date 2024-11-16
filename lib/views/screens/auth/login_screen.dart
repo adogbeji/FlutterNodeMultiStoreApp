@@ -251,11 +251,13 @@ class LoginScreen extends StatelessWidget {
                       letterSpacing: 1,
                     ),
                   ),
-                  Text(
-                    'Sign Up',
-                    style: GoogleFonts.roboto(
-                      color: const Color.fromARGB(255, 38, 94, 190),
-                      fontWeight: FontWeight.bold,
+                  InkWell(
+                    child: Text(
+                      'Sign Up',
+                      style: GoogleFonts.roboto(
+                        color: const Color.fromARGB(255, 38, 94, 190),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],

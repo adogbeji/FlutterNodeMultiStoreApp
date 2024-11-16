@@ -224,7 +224,7 @@ class RegisterScreen extends StatelessWidget {
 
                     Center(
                       child: Text(
-                        'Sign In',
+                        'Sign Up',
                         style: GoogleFonts.getFont(
                           'Lato',
                           fontSize: 18,
@@ -245,14 +245,14 @@ class RegisterScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    'Need an account?',
+                    'Already have an account?',
                     style: GoogleFonts.roboto(
                       fontWeight: FontWeight.w500,
                       letterSpacing: 1,
                     ),
                   ),
                   Text(
-                    'Sign Up',
+                    'Sign In',
                     style: GoogleFonts.roboto(
                       color: const Color.fromARGB(255, 38, 94, 190),
                       fontWeight: FontWeight.bold,
