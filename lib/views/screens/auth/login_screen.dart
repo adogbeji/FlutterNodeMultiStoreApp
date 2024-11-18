@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:store_app/views/screens/auth/register_screen.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -252,6 +254,11 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const RegisterScreen();
+                      }));
+                    },
                     child: Text(
                       'Sign Up',
                       style: GoogleFonts.roboto(

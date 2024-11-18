@@ -39,6 +39,47 @@ class RegisterScreen extends StatelessWidget {
                 height: 200,
               ),
 
+              // NAME INPUT FIELD
+              Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Full Name',
+                  style: GoogleFonts.getFont(
+                    'Nunito Sans',
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.2,
+                  ),
+                ),
+              ),
+
+              TextFormField(
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  filled: true,
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(9),
+                  ),
+                  focusedBorder: InputBorder.none,
+                  enabledBorder: InputBorder.none,
+                  labelText: 'Enter your full name',
+                  labelStyle: GoogleFonts.getFont(
+                    fontSize: 14,
+                    'Nunito Sans',
+                    letterSpacing: 0.1,
+                  ),
+                  prefixIcon: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: Image.asset(
+                      'assets/icons/user.jpeg',
+                      width: 20,
+                      height: 20,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 20,),
+
               // EMAIL INPUT FIELD
               Align(
                 alignment: Alignment.topLeft,
