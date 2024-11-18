@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'package:store_app/views/screens/auth/login_screen.dart';
+
 class RegisterScreen extends StatelessWidget {
   const RegisterScreen({super.key});
 
@@ -292,11 +294,18 @@ class RegisterScreen extends StatelessWidget {
                       letterSpacing: 1,
                     ),
                   ),
-                  Text(
-                    'Sign In',
-                    style: GoogleFonts.roboto(
-                      color: const Color.fromARGB(255, 38, 94, 190),
-                      fontWeight: FontWeight.bold,
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return const LoginScreen();
+                      }));
+                    },
+                    child: Text(
+                      'Sign In',
+                      style: GoogleFonts.roboto(
+                        color: const Color.fromARGB(255, 38, 94, 190),
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],
