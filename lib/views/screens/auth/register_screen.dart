@@ -331,7 +331,7 @@ class RegisterScreen extends StatelessWidget {
                       InkWell(
                         onTap: () {
                           Navigator.push(context, MaterialPageRoute(builder: (context) {
-                            return const LoginScreen();
+                            return LoginScreen();
                           }),);
                         },
                         child: Text(
