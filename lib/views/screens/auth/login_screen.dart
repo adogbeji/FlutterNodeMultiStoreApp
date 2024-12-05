@@ -58,6 +58,13 @@ class LoginScreen extends StatelessWidget {
                 ),
             
                 TextFormField(
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Enter your email!';
+                    } else {
+                      return null;
+                    }
+                  },
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
@@ -101,6 +108,13 @@ class LoginScreen extends StatelessWidget {
                 ),
             
                 TextFormField(
+                  validator: (value) {
+                    if (value!.isEmpty) {
+                      return 'Enter your password!';
+                    } else {
+                      return null;
+                    }
+                  },
                   decoration: InputDecoration(
                     fillColor: Colors.white,
                     filled: true,
@@ -132,113 +146,122 @@ class LoginScreen extends StatelessWidget {
                 ),
             
                 // LOGIN BUTTON
-                Container(
-                  width: 319,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(5),
-                    gradient: const LinearGradient(
-                      colors: [Colors.blueAccent, Colors.blue],
+                InkWell(
+                  onTap: () {
+                    if (_formKey.currentState!.validate()) {
+                      print('Valid!');
+                    } else {
+                      print('Invalid!');
+                    }
+                  },
+                  child: Container(
+                    width: 319,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      gradient: const LinearGradient(
+                        colors: [Colors.blueAccent, Colors.blue],
+                      ),
                     ),
-                  ),
-                  // child: Center(
-                  //   child: Text(
-                  //     'Log In',
-                  //     style: GoogleFonts.getFont(
-                  //       'Lato',
-                  //       fontSize: 17,
-                  //       color: Colors.white,
-                  //       // fontWeight: FontWeight.bold,
-                  //     ),
-                  //   ),
-                  // ),
-            
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        left: 278,
-                        top: 19,
-                        child: Opacity(
-                          opacity: 0.5,
-                          child: Container(
-                            width: 60,
-                            height: 60,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              border: Border.all(
-                                width: 12,
-                                color: const Color.fromARGB(255, 45, 102, 200),
+                    // child: Center(
+                    //   child: Text(
+                    //     'Log In',
+                    //     style: GoogleFonts.getFont(
+                    //       'Lato',
+                    //       fontSize: 17,
+                    //       color: Colors.white,
+                    //       // fontWeight: FontWeight.bold,
+                    //     ),
+                    //   ),
+                    // ),
+                              
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          left: 278,
+                          top: 19,
+                          child: Opacity(
+                            opacity: 0.5,
+                            child: Container(
+                              width: 60,
+                              height: 60,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  width: 12,
+                                  color: const Color.fromARGB(255, 45, 102, 200),
+                                ),
+                                borderRadius: BorderRadius.circular(30),
                               ),
-                              borderRadius: BorderRadius.circular(30),
                             ),
                           ),
                         ),
-                      ),
-            
-                      // Positioned(
-                      //   left: 260,
-                      //   top: 29,
-                      //   child: Opacity(
-                      //     opacity: 0.5,
-                      //     child: Container(
-                      //       width: 10,
-                      //       height: 10,
-                      //       clipBehavior: Clip.antiAlias,
-                      //       decoration: BoxDecoration(
-                      //         border: Border.all(width: 3),
-                      //         color: Colors.black,
-                      //         borderRadius: BorderRadius.circular(5),
-                      //       ),
-                      //     ),
-                      //   ),
-                      // ),
-            
-                      Positioned(
-                        left: 311,
-                        top: 36,
-                        child: Opacity(
-                          opacity: 0.3,
-                          child: Container(
-                            width: 5,
-                            height: 5,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                              
+                        // Positioned(
+                        //   left: 260,
+                        //   top: 29,
+                        //   child: Opacity(
+                        //     opacity: 0.5,
+                        //     child: Container(
+                        //       width: 10,
+                        //       height: 10,
+                        //       clipBehavior: Clip.antiAlias,
+                        //       decoration: BoxDecoration(
+                        //         border: Border.all(width: 3),
+                        //         color: Colors.black,
+                        //         borderRadius: BorderRadius.circular(5),
+                        //       ),
+                        //     ),
+                        //   ),
+                        // ),
+                              
+                        Positioned(
+                          left: 311,
+                          top: 36,
+                          child: Opacity(
+                            opacity: 0.3,
+                            child: Container(
+                              width: 5,
+                              height: 5,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(3),
+                              ),
+                            ),
+                          ),
+                        ),
+                              
+                        Positioned(
+                          left: 281,
+                          top: -10,
+                          child: Opacity(
+                            opacity: 0.3,
+                            child: Container(
+                              width: 20,
+                              height: 20,
+                              clipBehavior: Clip.antiAlias,
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(10),
+                              ),
+                            ),
+                          ),
+                        ),
+                              
+                        Center(
+                          child: Text(
+                            'Sign In',
+                            style: GoogleFonts.getFont(
+                              'Lato',
+                              fontSize: 18,
                               color: Colors.white,
-                              borderRadius: BorderRadius.circular(3),
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
-                      ),
-            
-                      Positioned(
-                        left: 281,
-                        top: -10,
-                        child: Opacity(
-                          opacity: 0.3,
-                          child: Container(
-                            width: 20,
-                            height: 20,
-                            clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(10),
-                            ),
-                          ),
-                        ),
-                      ),
-            
-                      Center(
-                        child: Text(
-                          'Sign In',
-                          style: GoogleFonts.getFont(
-                            'Lato',
-                            fontSize: 18,
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ),
             
